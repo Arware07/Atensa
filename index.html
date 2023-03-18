@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="src/img/atensa.png" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Ruleta de Preguntas</title>
+    <!--Ruleta-->
+    <script src="js/Winwheel.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <!--jQuery-->
+    <script src="js/jquery-3.2.1.slim.min.js"></script>
+    <!--Sweet Alert-->
+    <link href="css/sweetalert2.css" rel="stylesheet" />
+    <script src="js/sweetalert2.min.js"></script>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <!--Imagen de Fondo-->
+    <style type="text/css">
+        body {
+            background-image: url("src/img/eveningSunshine.png");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: 853px 480px;
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <!--Canvas Rueda-->
+            <style>
+                #canvasContainer{
+                    background-image: url(src/img/atensa.png);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    width: 700px;
+                    height: 722px;
+                    cursor:pointer;
+                }
+            </style>
+            <div class="container-fluid">
+                <div class="row">
+                    <!--Logotipo ruleta-->
+                    <div class="col-sm-4">
+                        <img src="src/img/atensa.png" class="img-fluid" alt="Responsive image" />
+                        
+                        <!--Botones-->
+                        <div class="d-flex justify-content-start">
+                        <div class="container-fluid" class="align-center" style="width: 70%;" >
+                            <br>
+                        <button type="button" class="btn btn-verde btn-lg"  onclick="alerta_auto()"><h5>Actividad Numero 1</h5></button>
+                        <br />
+                        <button type="button" class="btn btn-azul btn-lg" onclick="alerta_empa()"><h5>Actividad Numero 2</h5></button>
+                        <br />
+                        <button type="button" class="btn btn-morado btn-lg" onclick="alerta_coma()"><h5>Actividad Numero 3</h5></button>
+                        <button type="button" class="btn btn-mora" onclick="alerta_relai()"><h5>Actividad Numero 4</h5></button>
+                        <button type="button" class="btn btn-green btn-lg" onclick="alerta_tode()"><h5>Actividad Numero 5</h5></button>
+                        <button type="button" class="btn btn-gr btn-lg" onclick="alerta_mpc()"><h5>Actividad Numero 6</h5></button>
+                        <button type="button" class="btn btn-rose btn-lg" onclick="alerta_penc()"><h5>Actividad Numero 7</h5></button>
+                        <button type="button" class="btn btn-navy btn-lg" onclick="alerta_pencri()"><h5>Actividad Numero 8</h5></button>
+                        <button type="button" class="btn btn-red btn-lg" onclick="alerta_mes()"><h5>Actividad Numero 9</h5></button>
+                        <button type="button" class="btn btn-ora btn-lg" onclick="alerta_Mte()"><h5>Actividad Numero 10</h5></button>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4" class="align-baseline" style="width: 200px;">
+                        <div class="mx-auto" style="width: 300px;">
+                            <br />
+                            <!--Boton Girar-->    
+                    <input type="button" onclick="miRuleta.startAnimation();" class="btn btn-primary btn-lg btn-block" value="Girar Ruleta"/>
+                            <div id="canvasContainer">
+                                <canvas id="canvas" width="700" height="690">
+                                    Canvas not supported, please user another browser.
+                                </canvas>
+                            </div>
+      <canvas>
+          <!--Alertas-->
+             <script>
+                 function alerta_auto(){
+                     swal({
+                         title: '<i><font color="#84C430"><h2><strong>Actividad 1</strong></h2></font></i> ',
+                         imageUrl: 'src/img/atensa.png',
+                         imageHeight: 150,                        
+                         imageWidth: 150,
+                          width: '100%',
+                          padding: 60,
+                         html:
+                         //' <h3><small><p align="justify"><br />Es un proceso reflexivo en el cual una persona adquiere noción de su yo, de lo que lo caracteriza, de sus cualidades y defectos, de sus limitaciones, necesidades, aficiones y temores,<br /> ' + 
+                         '<br /><b></b> <h3> Describa el último accidente que presencio y mencione las omisiones de seguridad que se dieron para ocasionarlo.<h3/><br /><br />Tiempo estimado: 5 min<p></small></h3>'+
+                            '<img src = src/img/lesion.jpeg heigth = "200" width = "200"/>',                                                                
+                         showCloseButton: true,
+                         focusConfirm: false,
+                         confirmButtonText:
+                         '<i class="fa fa-thumbs-up"></i> ¡Genial!',
+                         confirmButtonAriaLabel: 'Thumbs up, great!',
+                         })
+                 }
+                 function alerta_empa(){
+                      swal({
+                    title: '<i><font color="#009FE0"><h2><strong>Actividad 2</font></strong></h2></i> ',
+                            imageUrl: 'src/img/atensa.png',
+                            imageWidth: 150,
+                            imageHeight: 150,
+                            //imageAlt: 'Custom image',
+                            width: '100%',
+                            padding: 60,
+                            html:
+                            ' <h3><p align="center"><br />Explique la pirámide de los accidentes de Frank Bird...</h3><br /> ' +
+                                '<img src = src/img/piramideFrank.jpg heigth = "450" width = "350" />',                            
+                                showCloseButton: true,
+                            focusConfirm: false,
+                            confirmButtonText:
+                            '<i class="fa fa-thumbs-up"></i> ¡Genial!',
+                            confirmButtonAriaLabel: 'Thumbs up, great!',
+                            })}
+                 function alerta_coma(){
+                    swal({
+                    title: '<i><font color="#9D2098"><h2><strong>Actividad 3</strong></h2></font></i> ',
+                            imageUrl: 'src/img/atensa.png',
+                            imageWidth: 200,
+                            imageHeight: 200,
+                            //imageAlt: 'Custom image',
+                            width: '100%',
+                            padding: 60,
+                            html:
+                            ' <h3><p align="center"><br />Explica la importancia de las siguientes reglas de seguridad.</h3><br /> ' +
+                                '<img src = src/img/prohibido/noCelular.png heigth = "100" width = "100" />' +
+                                '<img src = src/img/prohibido/noFumar.png heigth = "100" width = "100" />' +
+                                '<img src = src/img/prohibido/noTocar.jpg heigth = "100" width = "100" />' +
+                                '<img src = src/img/prohibido/noComer.png heigth = "100" width = "100" />' +
+                                '<img src = src/img/prohibido/noFotos.png heigth = "100" width = "100" />' +
+                                '<img src = src/img/prohibido/noBebidas.png heigth = "100" width = "100" />' ,
+                            showCloseButton: true,
+                            focusConfirm: false,
+                            confirmButtonText:
+                            '<i class="fa fa-thumbs-up"></i> ¡Genial!',
+                            confirmButtonAriaLabel: 'Thumbs up, great!',
+                            })}
+                 function alerta_relai(){
+                     swal({
+                    title: '<i><font color="#5146AF"><h2><strong>Actividad 4</strong></h2></font></i> ',
+                            imageUrl: 'src/img/atensa.png',
+                            imageWidth: 200,
+                            imageHeight: 200,
+                            width: '100%',
+                            padding: 60,
+                            html:
+                            ' <h3><p align="center"><br />Mencione a los compañeros que están capacitados para: </h3><br />' + 
+                            '<b>* Combatir un incendio</b> </br>' +
+                            '<b>* Dar primeros auxilios</b> </br>' +
+                            '<b>* Búsqueda y rescate  </b> </br>' +
+                            '</br><h3><small>Mencione la importancia de identificarlos</h3>' +
+                            '<img src = src/img/chaleco.png heigth = "150" width = "150" />',
+                            showCloseButton: true,
+                            focusConfirm: false,
+                            confirmButtonText:
+                            '<i class="fa fa-thumbs-up"></i> ¡Genial!',
+                            confirmButtonAriaLabel: 'Thumbs up, great!',
+                            })}
+                 function alerta_tode(){
+                     swal({
+                    title: '<i><font color="#00A585"><h2><strong>Actividad 5</strong></h2></font></i> ',
+                            imageUrl: 'src/img/atensa.png',
+                            imageWidth: 200,
+                            imageHeight: 200,
+                            width: '100%',
+                            padding: 60,
+                            html:
+                            ' <h3><small><p align="center"><br />Mencione la diferencia entre las condición insegura y acto inseguro a través de una historia.<br /><br /> ' +
+                            '<img src = src/img/superH.jpeg heigth = "170" width = "220"/>'+
+                            '<img src = src/img/zanahoria.png heigth = "130" width = "170"/>',
+                            showCloseButton: true,
+                            focusConfirm: false,
+                            confirmButtonText:
+                            '<i class="fa fa-thumbs-up"></i> ¡Genial!',
+                            confirmButtonAriaLabel: 'Thumbs up, great!',
+                            })}
+                 function alerta_mpc(){
+                     swal({
+                    title: '<i><font color="#465A65"><h2><strong>Actividad 6</strong></h2></font></i> ',
+                            imageUrl: 'src/img/atensa.png',
+                            imageWidth: 200,
+                            imageHeight: 200,
+                            width: '100%',
+                            padding: 60,
+                            html:
+                            ' <h3><p align="center"><br />Elija 2 compañeros al azar y pregúntele:<br /> ' + 
+                            '<br /><b>¿Cuales son los riesgos de seguridad de la actividad que realizaran el día de hoy?</b></b><p></h3>'+
+                            '<img src= src/img/cascoSeguridad.jpeg heigth = "200" width = "200"/>',
+                            showCloseButton: true,
+                            focusConfirm: false,
+                            confirmButtonText:
+                            '<i class="fa fa-thumbs-up"></i> Hecho',
+                            confirmButtonAriaLabel: 'Thumbs up, great!',
+                            })}
+                 function alerta_penc(){
+                    swal({
+                    title: '<i><font color="#ED3BCD"><h2><strong>Actividad 7</strong></h2></font></i> ',
+                            imageUrl: 'src/img/atensa.png',
+                            imageWidth: 200,
+                            imageHeight: 200,
+                            width: '100%',
+                            padding: 60,
+                            html:
+                            ' <h3><small><p align="center"><br />Explique el plan de emergencia del centro de trabajo en donde estará trabando el día de hoy.<br /> ' +                            
+                            '<img src= src/img/rutaEva.jpeg heigth = "200" width = "200"/>',
+                             showCloseButton: true,
+                            focusConfirm: false,
+                            confirmButtonText:
+                            '<i class="fa fa-thumbs-up"></i> Hecho :)',
+                            confirmButtonAriaLabel: 'Thumbs up, great!',
+                            })}
+                 function alerta_pencri(){
+                     swal({
+                    title: '<i><font color="#186FB4"><h2><strong>Actividad 8</strong></h2></font></i> ',
+                            imageUrl: 'src/img/atensa.png',
+                            imageWidth: 200,
+                            imageHeight: 200,
+                            width: '100%',
+                            padding: 60, 
+                            html:
+                            ' <h3><small><p align="center"><br />Explique los criterios a inspeccionar del equipo de protección que esta utilizando hoy.<br /> ' + 
+                            '<br /><b>Pude incluir:</b><h3/>' +
+                            '<p align = "center"><small>* Fecha de caducidad<p/>' +
+                            '<p align = "center">* Fecha de fabricación<p/>' +
+                            '<p align = "center">* Desgaste<p/>' +
+                            '<p align = "center">* Etc<p/><small/>' +
+                            '<img src = src/img/equipoSeguridad.png heigth = "500" width = "300"/>',
+                            showCloseButton: true,
+                            focusConfirm: false,
+                            confirmButtonText:
+                            '<i class="fa fa-thumbs-up"></i> Done :)',
+                            confirmButtonAriaLabel: 'Thumbs up, great!',
+                            })}
+                 function alerta_mes(){
+                     swal({
+                    title: '<i><font color="#EE3A45"><h2><strong>Actividad 9</font></strong></h2></i> ',
+                            imageUrl: 'src/img/atensa.png',
+                            imageWidth: 200,
+                            imageHeight: 180,
+                            width: '100%',
+                            padding: 60,
+                            html:
+                            ' <h3><small><p align="justify"><br />Identifique al compañero con menos tiempo en la empresa y pregunten 3 cosas que se deben hacer en caso de una emergencia.<br /> ' + 
+                            '<div><img src = src/img/sos.jpeg align = "center" heigth = "200" width = "200"/> <div/>',
+                            showCloseButton: true,
+                            focusConfirm: false,
+                            confirmButtonText:
+                            '<i class="fa fa-thumbs-up"></i> Hecho :)',
+                            confirmButtonAriaLabel: 'Thumbs up, great!',
+                            })}
+                 function alerta_Mte(){
+                     swal({
+                    title: '<i><font color="#FF6528"><h2><strong>Actividad 10</strong></h2></i></font>',
+                            imageUrl: 'src/img/atensa.png',
+                            imageWidth: 200,
+                            imageHeight: 200,
+                            width: '100%',
+                            padding: 60,
+                            html:
+                            ' <h3><small><p align="justify"><br />Explique al equipo la diferencia entre incidente y accidente.<br /> ' +
+                            '<h3> <small><p>De un ejemplo de cada uno.<p/>'+
+                            '<div><img src = src/img/pisoM.jpeg align = "center" heigth = "200" width = "200"/> <div/>',
+                            showCloseButton: true,
+                            focusConfirm: false,
+                            confirmButtonText:
+                            '<i class="fa fa-thumbs-up"></i> Hecho :)!',                            
+                            confirmButtonAriaLabel: 'Thumbs up, great!',
+                            })}
+                 <!--Ruletasegmentos-->
+    var miRuleta = new Winwheel({
+        'numSegments': 20, // Número de segmentos
+        'outerRadius': 270, // Radio externo
+        'innerRadius': 80,  
+        'segments':[ // Datos de los segmentos
+   { 'fillStyle': '#84C430', 'toxt': 'Actividad 1', 'number': '1' },
+   { 'fillStyle': '#009FE0', 'toxt': 'Actividad 2', 'number': '2'},
+   { 'fillStyle': '#9D2098', 'toxt': 'Actividad 3', 'number': '3'},
+   { 'fillStyle': '#5146AF', 'toxt': 'Actividad 4', 'number': '4'},
+   { 'fillStyle': '#00A585', 'toxt': 'Actividad 5', 'number': '5'},
+   { 'fillStyle': '#465A65', 'toxt': 'Actividad 6', 'number': '6'},
+   { 'fillStyle': '#ED3BCD', 'toxt': 'Actividad 7', 'number': '7'},
+   { 'fillStyle': '#186FB4', 'toxt': 'Actividad 8', 'number': '8'},
+   { 'fillStyle': '#EE3A45', 'toxt': 'Actividad 9', 'number': '9'},
+   { 'fillStyle': '#FA7D21', 'toxt': 'Actividad 10', 'number': '10'},
+            ],
+            'animation': { 
+                'type': 'spinToStop', // Giro y alto
+                'duration': 7, // Duración de giro
+                'callbackFinished': 'Mensaje()', // Función para mostrar mensaje
+                'callbackAfter': 'dibujarIndicador()' // Funciona de pintar indicador
+            }
+         });
+      function Mensaje() {
+           var SegmentoSeleccionado =
+           winningSegment = miRuleta.getIndicatedSegment();
+          var MensajeSeleccionado= winningSegment.number;
+          switch (MensajeSeleccionado){
+              case "1":
+                  alerta_auto();
+                  break;
+              case "2":
+                  alerta_empa();
+                  break;
+              case "3":
+                  alerta_coma();
+                  break;
+              case "4":
+                  alerta_relai();
+                  break;
+              case "5":
+                  alerta_tode();
+                  break;
+              case "6":
+                  alerta_mpc();
+                  break;
+              case "7":
+                  alerta_penc();
+                  break;
+              case "8":
+                  alerta_pencri();
+                  break;
+              case "9":
+                  alerta_mes();
+                  break;
+              case "10":
+                  alerta_Mte();
+                  break;
+          }
+           //Reinicio de Ruleta
+           miRuleta.stopAnimation(false);
+           miRuleta.rotationAngle = 0;
+           miRuleta.draw();
+           dibujarIndicador();
+       }
+     // <!--IndicadorRuleta-->
+    dibujarIndicador();
+    function dibujarIndicador() {
+            var ctx = miRuleta.ctx;
+              distnaciaX = 150;
+             distnaciaY = 50;
+             ctx = miRuleta.ctx;
+             ctx.strokeStyle = '#FF6528';
+             ctx.fillStyle = '#FF6528';
+             ctx.lineWidth = 2;
+             ctx.beginPath();
+             ctx.moveTo(distnaciaX + 170, distnaciaY + 5);
+             ctx.lineTo(distnaciaX + 230, distnaciaY + 5);
+             ctx.lineTo(distnaciaX + 200, distnaciaY + 40);
+             ctx.lineTo(distnaciaX + 171, distnaciaY + 5);
+             ctx.stroke();
+             ctx.fill(); 
+       }
+		</script>
+	</canvas>
+                        </div>
+                        <div class="col-sm-4">
+                            <audio src="src/audio/ambiente.mp3" controls autoplay loop>
+                                <p>Tu navegador no implementa el elemento audio</p>
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

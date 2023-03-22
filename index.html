@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <!--Font Awesome-->
     <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <!--CSS Style-->
+    <link rel="stylesheet" href="css/style.css">
     <!--Imagen de Fondo-->
     <style type="text/css">
         body {
@@ -50,23 +52,38 @@
                         <img src="src/img/atensa.png" class="img-fluid" alt="Responsive image" />
                         
                         <!--Botones-->
+                        <br/>
                         <div class="d-flex justify-content-start">
-                        <div class="container-fluid" class="align-center" style="width: 70%;" >
-                            <br>
-                        <button type="button" class="btn btn-verde btn-lg"  onclick="alerta_1()"><h5>Actividad Numero 1</h5></button>
-                        <br />
-                        <button type="button" class="btn btn-azul btn-lg" onclick="alerta_2()"><h5>Actividad Numero 2</h5></button>
-                        <br />
-                        <button type="button" class="btn btn-morado btn-lg" onclick="alerta_3()"><h5>Actividad Numero 3</h5></button>
-                        <button type="button" class="btn btn-mora" onclick="alerta_4()"><h5>Actividad Numero 4</h5></button>
-                        <button type="button" class="btn btn-green btn-lg" onclick="alerta_5()"><h5>Actividad Numero 5</h5></button>
-                        <button type="button" class="btn btn-gr btn-lg" onclick="alerta_6()"><h5>Actividad Numero 6</h5></button>
-                        <button type="button" class="btn btn-rose btn-lg" onclick="alerta_7()"><h5>Actividad Numero 7</h5></button>
-                        <button type="button" class="btn btn-navy btn-lg" onclick="alerta_8()"><h5>Actividad Numero 8</h5></button>
-                        <button type="button" class="btn btn-red btn-lg" onclick="alerta_9()"><h5>Actividad Numero 9</h5></button>
-                        <button type="button" class="btn btn-ora btn-lg" onclick="alerta_10()"><h5>Actividad Numero 10</h5></button>
+                        <div class="align-center" style="width: 70%;" >   
+                            <br/>                         
+                        <button type="button" class="btn btn-lg" style = "background-color:  #37e332 ;" onclick="alerta_1()"><h5>Actividad 01</h5></button>                        
+                        <button type="button" class="btn btn-lg" style = "background-color:  #325ae3 ;" onclick="alerta_2()"><h5>Actividad 02</h5></button>                        
+                        <button type="button" class="btn btn-lg" style = "background-color:  #7f1c90 ;" onclick="alerta_3()"><h5>Actividad 03</h5></button>
+                        <button type="button" class="btn btn-lg" style = "background-color:  #dd26df ;" onclick="alerta_4()"><h5>Actividad 04</h5></button>
+                        <button type="button" class="btn btn-lg" style = "background-color:  #1594cb ;" onclick="alerta_5()"><h5>Actividad 05</h5></button>
+                        <button type="button" class="btn btn-lg" style = "background-color:  #54585a ;" onclick="alerta_6()"><h5>Actividad 06</h5></button>
+                        <button type="button" class="btn btn-lg" style = "background-color:  #e827b6 ;" onclick="alerta_7()"><h5>Actividad 07</h5></button>
+                        <button type="button" class="btn btn-lg" style = "background-color:  #27e8bf ;" onclick="alerta_8()"><h5>Actividad 08</h5></button>
+                        <button type="button" class="btn btn-lg" style = "background-color:  #ec1414 ;" onclick="alerta_9()"><h5>Actividad 09</h5></button>
+                        <button type="button" class="btn btn-lg" style = "background-color:  #ec6914 ;" onclick="alerta_10()"><h5>Actividad 10</h5></button>
+                            
+                        </div>
+                        <div>&nbsp;&nbsp;</div> <!--Para separar div-->
+                        <div class="align-left">
+                            <br/>
+                            <button type="button" class="btn btn-lg" style = "background-color:  #f0e724 ;" onclick="alerta_11()"><h5>Actividad 11</h5></button>
+                            <button type="button" class="btn btn-lg" style = "background-color:  #aeda31 ;" onclick="alerta_12()"><h5>Actividad 12</h5></button>
+                            <button type="button" class="btn btn-lg" style = "background-color:  #f774d4 ;" onclick="alerta_13()"><h5>Actividad 13</h5></button>
+                            <button type="button" class="btn btn-lg" style = "background-color:  #5fcbb6 ;" onclick="alerta_14()"><h5>Actividad 14</h5></button>
+                            <button type="button" class="btn btn-lg" style = "background-color:  #64f75f ;" onclick="alerta_15()"><h5>Actividad 15</h5></button>
+                            <button type="button" class="btn btn-lg" style = "background-color:  #fce500 ;" onclick="alerta_16()"><h5>Actividad 16</h5></button>
+                            <button type="button" class="btn btn-lg" style = "background-color:  #ffa852 ;" onclick="alerta_17()"><h5>Actividad 17</h5></button>
+                            <button type="button" class="btn btn-lg" style = "background-color:  #24346d ;" onclick="alerta_18()"><h5>Actividad 18</h5></button>
+                            <button type="button" class="btn btn-lg" style = "background-color:  #de1e4c ;" onclick="alerta_19()"><h5>Actividad 19</h5></button>
+                            <button type="button" class="btn btn-lg" style = "background-color:  #95f38d ;" onclick="alerta_20()"><h5>Actividad 20</h5></button>
                         </div>
                         </div>
+                        
                     </div>
                     <div class="col-sm-4" class="align-baseline" style="width: 200px;">
                         <div class="mx-auto" style="width: 300px;">
@@ -263,9 +280,189 @@
                             width: '100%',
                             padding: 60,
                             html:
+                            ' <h3><small><p align="center"><br />Explique al equipo la diferencia entre incidente y accidente.<br /> ' +
+                            '<h3> <small><p>De un ejemplo de cada uno.<p/>'+
+                            '<div><img src = src/img/pisoM.jpeg align = "center" heigth = "200" width = "200"/> <div/>',
+                            showCloseButton: true,
+                            focusConfirm: false,
+                            confirmButtonText:
+                            '<i class="fa fa-thumbs-up"></i> Hecho :)!',                            
+                            confirmButtonAriaLabel: 'Thumbs up, great!',
+                            })}
+                 function alerta_11(){
+                     swal({
+                    title: '<i><font color="#F0E724"><h2><strong>Actividad 11</strong></h2></i></font>',
+                            imageUrl: 'src/img/atensa.png',
+                            imageWidth: 200,
+                            imageHeight: 200,
+                            width: '100%',
+                            padding: 60,
+                            html:
+                            ' <h3><small><p align="justify"><br />Pide a cada integrante que mencione cual es su motivación para regresar salvo a casa y a que se compromete el día de hoy para lograrlo.<br /> ' +
+                            '<h3> <small><p>Prohibido decir “Me comprometo a cuidarme”.<p/>'+
+                            '<div><img src = src/img/equipoSeguridad.png align = "center" heigth = "200" width = "200"/> <div/>',
+                            showCloseButton: true,
+                            focusConfirm: false,
+                            confirmButtonText:
+                            '<i class="fa fa-thumbs-up"></i> Hecho :)',                            
+                            confirmButtonAriaLabel: 'Thumbs up, great!',
+                            })}
+                 function alerta_12(){
+                     swal({
+                    title: '<i><font color="#AEDA31"><h2><strong>Actividad 12</strong></h2></i></font>',
+                            imageUrl: 'src/img/atensa.png',
+                            imageWidth: 200,
+                            imageHeight: 200,
+                            width: '100%',
+                            padding: 60,
+                            html:
+                            ' <h3><small><p align="justify"><br />Explique los señalamientos de ruta de evacuación y mencione las rutas de evacuación del centro de trabajo en donde trabajara hoy.<br /> ' +
+                            '<div><img src = src/img/señalamientosEva.png align = "center" heigth = "300" width = "250"/> <div/>',
+                            showCloseButton: true,
+                            focusConfirm: false,
+                            confirmButtonText:
+                            '<i class="fa fa-thumbs-up"></i> Hecho :)!',                            
+                            confirmButtonAriaLabel: 'Thumbs up, great!',
+                            })}
+                 function alerta_13(){
+                     swal({
+                    title: '<i><font color="#F774D4"><h2><strong>Actividad 13</strong></h2></i></font>',
+                            imageUrl: 'src/img/atensa.png',
+                            imageWidth: 200,
+                            imageHeight: 200,
+                            width: '100%',
+                            padding: 60,
+                            html:
+                            ' <h3><small><p align="center"><br />Explique al equipo ¿Por que es importante reportar los incidentes aunque no hayan generado lesiones?<br /> ' +
+                            '<h3> <small><p>Y mencione un ejemplo.<p/>'+
+                            '<div><img src = src/img/reporteA.jpeg heigth = "200" width = "200" />'+
+                            '<img src = src/img/reporteH.png heigth = "200" width = "200"/> <div/>',
+                            showCloseButton: true,
+                            focusConfirm: false,
+                            confirmButtonText:
+                            '<i class="fa fa-thumbs-up"></i> Hecho :)!',                            
+                            confirmButtonAriaLabel: 'Thumbs up, great!',
+                            })}
+                 function alerta_14(){
+                     swal({
+                    title: '<i><font color="#5FCBB6"><h2><strong>Actividad 14</strong></h2></i></font>',
+                            imageUrl: 'src/img/atensa.png',
+                            imageWidth: 200,
+                            imageHeight: 200,
+                            width: '100%',
+                            padding: 60,
+                            html:
+                            ' <h3><small><p align="justify"><br />Mencione dos peligros de su trabajo que le puedan ocasionar un accidente y otros dos que le puedan ocasionar una enfermedad ocupacional.<br /> ' +
+                            '<div><img src = src/img/peligro.jpeg align = "center" heigth = "200" width = "200"/> '+
+                                '<img src = src/img/peligro2.png align = "center" heigth = "300" width = "300"/> <div/>',
+                            showCloseButton: true,
+                            focusConfirm: false,
+                            confirmButtonText:
+                            '<i class="fa fa-thumbs-up"></i> Hecho :)',                            
+                            confirmButtonAriaLabel: 'Thumbs up, great!',
+                            })}
+                 function alerta_15(){
+                     swal({
+                    title: '<i><font color="#64F75F"><h2><strong>Actividad 15</strong></h2></i></font>',
+                            imageUrl: 'src/img/atensa.png',
+                            imageWidth: 200,
+                            imageHeight: 200,
+                            width: '100%',
+                            padding: 60,
+                            html:
+                            ' <h3><small><p align="center"><br/>Describa el último accidente que presencio y mencione las omisiones de seguridad que se le dieron para ocasionarlo.<br /> ' +
+                            '<div><img src = src/img/pisoM.jpeg align = "center" heigth = "200" width = "200"/>'+
+                            '<img src = src/img/lesion2.png align = "center" heigth = "200" width = "250"/> <div/>',
+                            showCloseButton: true,
+                            focusConfirm: false,
+                            confirmButtonText:
+                            '<i class="fa fa-thumbs-up"></i> Hecho :)!',                            
+                            confirmButtonAriaLabel: 'Thumbs up, great!',
+                            })}
+                 function alerta_16(){
+                     swal({
+                    title: '<i><font color="#FCE500"><h2><strong>Actividad 16</strong></h2></i></font>',
+                            imageUrl: 'src/img/atensa.png',
+                            imageWidth: 200,
+                            imageHeight: 200,
+                            width: '100%',
+                            padding: 60,
+                            html:
+                            ' <h3><small><p align="justify"><br />Explique la técnica de RCP<br /> ' +
+                            '<h3> <small><p>De un ejemplo de cada uno.<p/>'+
+                            '<div><img src = src/img/pisoM.jpeg align = "center" heigth = "200" width = "200"/> <div/>',
+                            showCloseButton: true,
+                            focusConfirm: false,
+                            confirmButtonText:
+                            '<i class="fa fa-thumbs-up"></i> Hecho :)!',                            
+                            confirmButtonAriaLabel: 'Thumbs up, great!',
+                            })}
+                 function alerta_17(){
+                     swal({
+                    title: '<i><font color="#FFA852"><h2><strong>Actividad 17</strong></h2></i></font>',
+                            imageUrl: 'src/img/atensa.png',
+                            imageWidth: 200,
+                            imageHeight: 200,
+                            width: '100%',
+                            padding: 60,
+                            html:
                             ' <h3><small><p align="justify"><br />Explique al equipo la diferencia entre incidente y accidente.<br /> ' +
                             '<h3> <small><p>De un ejemplo de cada uno.<p/>'+
-                            '<div><img src = src/img/pisoM.jpeg align = "center" heigth = "201" width = "200"/> <div/>',
+                            '<div><img src = src/img/pisoM.jpeg align = "center" heigth = "200" width = "200"/> <div/>',
+                            showCloseButton: true,
+                            focusConfirm: false,
+                            confirmButtonText:
+                            '<i class="fa fa-thumbs-up"></i> Hecho :)!',                            
+                            confirmButtonAriaLabel: 'Thumbs up, great!',
+                            })}
+                 function alerta_18(){
+                     swal({
+                    title: '<i><font color="#24346D"><h2><strong>Actividad 18</strong></h2></i></font>',
+                            imageUrl: 'src/img/atensa.png',
+                            imageWidth: 200,
+                            imageHeight: 200,
+                            width: '100%',
+                            padding: 60,
+                            html:
+                            ' <h3><small><p align="justify"><br />Explique al equipo la diferencia entre incidente y accidente.<br /> ' +
+                            '<h3> <small><p>De un ejemplo de cada uno.<p/>'+
+                            '<div><img src = src/img/pisoM.jpeg align = "center" heigth = "200" width = "200"/> <div/>',
+                            showCloseButton: true,
+                            focusConfirm: false,
+                            confirmButtonText:
+                            '<i class="fa fa-thumbs-up"></i> Hecho :)!',                            
+                            confirmButtonAriaLabel: 'Thumbs up, great!',
+                            })}
+                 function alerta_19(){
+                     swal({
+                    title: '<i><font color="#DE1E4C"><h2><strong>Actividad 19</strong></h2></i></font>',
+                            imageUrl: 'src/img/atensa.png',
+                            imageWidth: 200,
+                            imageHeight: 200,
+                            width: '100%',
+                            padding: 60,
+                            html:
+                            ' <h3><small><p align="justify"><br />Explique al equipo la diferencia entre incidente y accidente.<br /> ' +
+                            '<h3> <small><p>De un ejemplo de cada uno.<p/>'+
+                            '<div><img src = src/img/pisoM.jpeg align = "center" heigth = "200" width = "200"/> <div/>',
+                            showCloseButton: true,
+                            focusConfirm: false,
+                            confirmButtonText:
+                            '<i class="fa fa-thumbs-up"></i> Hecho :)!',                            
+                            confirmButtonAriaLabel: 'Thumbs up, great!',
+                            })}
+                 function alerta_20(){
+                     swal({
+                    title: '<i><font color="#95F38D"><h2><strong>Actividad 20</strong></h2></i></font>',
+                            imageUrl: 'src/img/atensa.png',
+                            imageWidth: 200,
+                            imageHeight: 200,
+                            width: '100%',
+                            padding: 60,
+                            html:
+                            ' <h3><small><p align="justify"><br />Explique al equipo la diferencia entre incidente y accidente.<br /> ' +
+                            '<h3> <small><p>De un ejemplo de cada uno.<p/>'+
+                            '<div><img src = src/img/pisoM.jpeg align = "center" heigth = "200" width = "200"/> <div/>',
                             showCloseButton: true,
                             focusConfirm: false,
                             confirmButtonText:
@@ -288,10 +485,20 @@
    { 'fillStyle': '#186FB4', 'toxt': 'Actividad 8', 'number': '8'},
    { 'fillStyle': '#EE3A45', 'toxt': 'Actividad 9', 'number': '9'},
    { 'fillStyle': '#FA7D21', 'toxt': 'Actividad 10', 'number': '10'},
+   { 'fillStyle': '#F0E724', 'toxt': 'Actividad 11', 'number': '11'},
+   { 'fillStyle': '#AEDA31', 'toxt': 'Actividad 12', 'number': '12'},
+   { 'fillStyle': '#F774D4', 'toxt': 'Actividad 13', 'number': '13'},
+   { 'fillStyle': '#5FCBB6', 'toxt': 'Actividad 14', 'number': '14'},
+   { 'fillStyle': '#64F75F', 'toxt': 'Actividad 15', 'number': '15'},
+   { 'fillStyle': '#FCE500', 'toxt': 'Actividad 16', 'number': '16'},
+   { 'fillStyle': '#FFA852', 'toxt': 'Actividad 17', 'number': '17'},
+   { 'fillStyle': '#24346D', 'toxt': 'Actividad 18', 'number': '18'},
+   { 'fillStyle': '#DE1E4C', 'toxt': 'Actividad 19', 'number': '29'},
+   { 'fillStyle': '#95F38D', 'toxt': 'Actividad 20', 'number': '20'},
             ],
             'animation': { 
                 'type': 'spinToStop', // Giro y alto
-                'duration': 7, // Duración de giro
+                'duration': 5, // Duración de giro
                 'callbackFinished': 'Mensaje()', // Función para mostrar mensaje
                 'callbackAfter': 'dibujarIndicador()' // Funciona de pintar indicador
             }
@@ -331,6 +538,67 @@
               case "10":
                   alerta_10();
                   break;
+              case "1":
+                  alerta_1();
+                  break;
+              case "2":
+                  alerta_2();
+                  break;
+              case "3":
+                  alerta_3();
+                  break;
+              case "4":
+                  alerta_4();
+                  break;
+              case "5":
+                  alerta_5();
+                  break;
+              case "6":
+                  alerta_6();
+                  break;
+              case "7":
+                  alerta_7();
+                  break;
+              case "8":
+                  alerta_8();
+                  break;
+              case "9":
+                  alerta_9();
+                  break;
+              case "10":
+                  alerta_10();
+                  break;
+              case "11":
+                  alerta_11();
+                  break;
+              case "12":
+                  alerta_12();
+                  break;
+              case "13":
+                  alerta_13();
+                  break;
+              case "14":
+                  alerta_14();                                   ;
+                  break;
+              case "15":
+                  alerta_15();
+                  break;
+              case "16":
+                  alerta_16();                                   ;
+                  break;
+              case "17":
+                  alerta_17();
+                  break;
+              case "18":
+                  alerta_18();                                   ;
+                  break;
+              case "19":
+                  alerta_19();
+                  break;
+              case "10":
+                  alerta_20();                                   ;
+                  break;
+
           }
            //Reinicio de Ruleta
            miRuleta.stopAnimation(false);
